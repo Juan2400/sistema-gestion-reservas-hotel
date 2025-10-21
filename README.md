@@ -73,7 +73,7 @@ Permite gestionar las reservas, los tipos de habitación, realizar análisis de 
 
 | Categoría | Tecnologías |
 |------------|-------------|
-| **Lenguajes** | PHP, JavaScript, HTML5, CSS3 |
+| **Lenguajes** | PHP, JavaScript |
 | **Frameworks / Librerías** | Bootstrap, PHPMailer, PhpSpreadsheet |
 | **Base de Datos** | MySQL |
 | **Servidor Local** | Apache (XAMPP) |
