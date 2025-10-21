@@ -76,7 +76,7 @@ Permite gestionar las reservas, los tipos de habitación, realizar análisis de 
 | **Lenguajes** | PHP, JavaScript, HTML5, CSS3 |
 | **Frameworks / Librerías** | Bootstrap, PHPMailer, PhpSpreadsheet |
 | **Base de Datos** | MySQL |
-| **Servidor Local** | Apache (XAMPP / Laragon recomendado) |
+| **Servidor Local** | Apache (XAMPP) |
 | **Conexión Segura** | PDO (PHP Data Objects) |
 
 ---
