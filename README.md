@@ -1,10 +1,9 @@
 # 🏨 Sistema para la Gestión de Reservas de Habitaciones y Análisis  
 ### Hospedaje Golden Red
 
-> Proyecto académico desarrollado para el **Curso Integrador 1: Sistemas Software (2025)**  
+> Proyecto académico desarrollado para el **Curso Integrador 1: Sistemas Software (2024)**  
 > **Carrera:** Ingeniería de Sistemas e Informática  
 > **Ciclo:** VI  
-> **Institución:** [Nombre de tu Universidad]  
 
 ---
 
