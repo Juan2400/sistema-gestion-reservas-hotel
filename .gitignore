@@ -1,0 +1,17 @@
+# Archivos sensibles
+.env
+
+# Entorno local
+/vendor/
+/PhpSpreadsheet/
+/enviarCorreo/PHPMailer/
+
+# IDEs y otros
+.idea/
+.vscode/
+*.log
+*.sql
+*.zip
+*.rar
+*.bak
+.DS_Store

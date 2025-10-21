@@ -1,0 +1,71 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Color gris claro para el fondo general */
+}
+
+header {
+    background: #9f4142; /* Color rojo */
+    color: #f8f9fa; /* Color blanco para el texto */
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar {
+    background-color: #9f4142; /* Color rojo */
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    color: #f8f9fa; /* Color blanco */
+}
+
+.navbar-nav .nav-link {
+    color: #f8f9fa !important; /* Color blanco */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e9ecef !important; /* Color gris claro */
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.card {
+    border: none;
+    overflow: hidden;
+}
+
+footer {
+    background-color: #677786; /* Color gris */
+    color: #f8f9fa; /* Color blanco */
+}
+
+.display-4 {
+    color: #9f4142; /* Color rojo */
+}
+
+.playwrite {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.container h2 {
+    margin-bottom: 2rem;
+    color: #9f4142; /* Color rojo */
+}
+
+.custom-header {
+    background-color: #677786; /* Color gris */
+}
+
+.custom-header h1 {
+    color: #f8f9fa; /* Color blanco para el texto */
+}
+
+.custom-header .playwrite {
+    color: #f8f9fa; /* Color blanco para el texto */
+}
