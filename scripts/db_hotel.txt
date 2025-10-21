@@ -1,0 +1,74 @@
+CREATE TABLE TipoUsuario (
+    id_tipo_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    tipo VARCHAR(50) -- Ej: 'cliente', 'administrador'
+);
+
+CREATE TABLE TipoEstadia (
+    id_tipo_estadia INT AUTO_INCREMENT PRIMARY KEY,
+    tipo VARCHAR(50), -- Ej: '1 Hora', '2 Horas',…'12 Horas'
+     duracion_horas INT
+);
+
+CREATE TABLE EstadoHabitacion (
+    id_estado_habitacion INT AUTO_INCREMENT PRIMARY KEY,
+    estado VARCHAR(50) -- Ej: 'disponible', 'ocupada', 'mantenimiento'
+);
+
+CREATE TABLE TipoHabitacion (
+    id_tipo_habitacion INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50), -- Ej: ('suite', 'matrimonial', 'doble')
+    descripcion TEXT,
+    tarifa_hora DECIMAL(10, 2)
+);
+
+CREATE TABLE Usuario (
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    nombres VARCHAR(200),
+    dni CHAR(8),
+    edad INT,
+    correo_electronico VARCHAR(100) UNIQUE,
+    contrasena VARCHAR(255),
+    id_tipo_usuario INT,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_tipo_usuario) REFERENCES TipoUsuario(id_tipo_usuario)
+);
+
+CREATE TABLE Habitacion (
+    id_habitacion INT AUTO_INCREMENT PRIMARY KEY,
+    numero_habitacion VARCHAR(10),
+    id_tipo_habitacion INT,
+    id_estado_habitacion INT,
+    FOREIGN KEY (id_tipo_habitacion) REFERENCES TipoHabitacion(id_tipo_habitacion),
+    FOREIGN KEY (id_estado_habitacion) REFERENCES EstadoHabitacion(id_estado_habitacion)
+);
+
+CREATE TABLE Reserva (
+    id_reserva INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT,
+    id_habitacion INT,
+    fecha_inicio DATETIME,
+    fecha_fin DATETIME,
+    id_tipo_estadia INT,
+    codigo_alfanumerico VARCHAR(20),
+    fecha_reserva TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    confirmada TINYINT(1) NOT NULL DEFAULT 0,
+    completada TINYINT(1) NOT NULL DEFAULT 0,
+    FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario),
+    FOREIGN KEY (id_habitacion) REFERENCES Habitacion(id_habitacion),
+    FOREIGN KEY (id_tipo_estadia) REFERENCES TipoEstadia(id_tipo_estadia)
+);
+CREATE TABLE MetodoPago (
+    id_metodo_pago INT AUTO_INCREMENT PRIMARY KEY,
+    metodo VARCHAR(50) -- Ej: 'tarjeta', 'efectivo', 'transferencia'
+);
+CREATE TABLE Pago (
+    id_pago INT AUTO_INCREMENT PRIMARY KEY,
+    id_reserva INT,
+    monto DECIMAL(10, 2),
+    id_metodo_pago INT,
+    fecha_pago DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_reserva) REFERENCES Reserva(id_reserva),
+    FOREIGN KEY (id_metodo_pago) REFERENCES MetodoPago(id_metodo_pago)
+);
+
+
